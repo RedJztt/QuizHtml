@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+.grid-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.content h1 {
+    font-family: "Montserrat";
+    font-size: 4.5rem;
+
+}
+
+.content p {
+    padding-top: 10px;
+    font-family: monospace;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.30em;
+}
+
+
+
+
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+        }
+
+        body {
+    margin: 0px;
+    overflow-x: hidden;
+    
+}
+
+h1,h3, a, p, span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  color: white;
+  margin: 0px;
+}
+
+
+        .banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(amenities.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.navbar{
+    margin-left: 5%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 52%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px;
+            margin: auto;
+            max-width: auto;
+            background-color: #222;
+
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 60%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+
+
+        .grid-item h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+
+        button {
+    border-radius: 30px;
+}
+.content button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 100px;
+    border: 2px solid #009688;
+    transition: 1s;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+}
+
+.content span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 1s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border-color: transparent;
+    transition: 0.4s;
+    color:black;
+}
+
+.divider {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('indooramenities.jpg'),radial-gradient(#747272, #0d7751);
+    background-size: cover;
+    background-position: center;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 2rem;
+    background-blend-mode: multiply,screen, overlay;
+
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.divider2 {
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('outdooramenities.jpg'),radial-gradient(#747272, #0d7751);
+    background-size: cover;
+    background-position: center;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 2rem;
+    background-blend-mode: multiply,screen, overlay;
+
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.inner {
+  font-family: "Share Tech Mono", monospace;
+  color: #fff;
+  font-size: 6vh;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0.09em;
+    min-width: 30vw;
+  }
+  
+  &::before {
+    background: linear-gradient(to right, rgba(240,240,240,0), #fff);
+    margin-right: 4vh;
+  }
+  
+  &::after {
+    background: linear-gradient(to left, rgba(240,240,240,0), #fff);
+    margin-left: 4vh;
+    
+  } 
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="Logo.png" height="100px">
+            <ul>
+    <li><a href="Structural.html">Home</a></li>
+    <li><a href="amenities.html">Amenities</a></li>
+    <li><a href="roomrate.html">Room Rate</a></li>
+    <li><a href="reservation.html">Reservation</a></li>
+    <li><a href="aboutus.html">ABout us</a></li>
+            </ul>
+          </div>
+
+  
+
+      <div class="content">
+        <h1>Amenities</h1>
+        <p>Discover our world-class indoor and outdoor amenities designed to make your stay unforgettable.
+        </p>
+
+      <div>
+        <button onclick="window.location.href='#tomybody'"><span></span>Read more</button>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="divider">
+        <a data-aos="fade-up">
+        <div class="inner">Indoor Amenities</div>
+        </a>
+      </div>
+
+
+<div class="content-container">
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="gameroom.jpg" alt="gayming room bu Josephpogiiiiiiiiii">
+        <h2>Game Room</h2>
+        <p>Challenge your friends in our modern game room featuring arcade classics.</p>
+    </div>
+
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="400">
+        <img src="spa.jpg" alt="Spa & Wellness">
+        <h2>Spa & Wellness</h2>
+        <p>Relax and rejuvenate with personalized spa treatments in a serene environment.</p>
+    </div>
+
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="600">
+        <img src="dine.webp" alt="Fine Dining">
+        <h2>Fine Dining</h2>
+        <p>Indulge in exquisite culinary experiences with our world-class chefs and diverse menu.</p>
+    </div>
+
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="800">
+        <img src="fitness.jpg" alt="Fitness Center">
+        <h2>Fitness Center</h2>
+        <p>Stay active in our state-of-the-art gym equipped with the latest fitness technology.</p>
+    </div>
+
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="indoorpool.jpg" alt="Indoor pool">
+        <h2>Indoor Pool</h2>
+        <p>A heated swimming pool for a relaxing swim, no matter the weather.</p>
+    </div>
+
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="cinema.avif" alt="Josephpogiiiiiiiiii">
+        <h2>Private Cinema</h2>
+        <p>Enjoy a movie night in our luxurious private theater, complete with cozy seating and the latest films.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="divider2">
+    <a data-aos="fade-up">
+    <div class="inner">Outdoor Amenities</div>
+    </a>
+  </div>
+<div class="content-container">
+    <!-- Outdoor Amenities si Joseph Pogi so muchieeeeee-->
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="outdoorpool.jpg" alt="outdoor Pool">
+        <h2>Outdoor Pool</h2>
+        <p>Bask in the sun at our stunning infinity pool, offering breathtaking views of the surrounding landscape. Perfect for unwinding or enjoying a refreshing swim.</p>
+    </div>
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="300">
+        <img src="outdoorlib.jpg" alt="Library">
+        <h2>Outdoor Library</h2>
+        <p>Immerse yourself in the joy of reading amidst nature. Our outdoor library offers cozy seating, shaded nooks, and a selection of books to enjoy under the open sky.</p>
+    </div>
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="400">
+        <img src="stargazing.png" alt="Stargazing Observatory">
+        <h2>Stargazing Observatory</h2>
+        <p>A dedicated area with telescopes and cozy seating for guests to enjoy the night sky. Pair it with warm drinks for an unforgettable experience.</p>
+    </div>
+
+    <!-- Outdoor Amenities -->
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="500">
+        <img src="botanical.jpg" alt="Botanical Garden">
+        <h2>Botanical Garden</h2>
+        <p>Stroll through our lush gardens filled with vibrant flowers and exotic plants.</p>
+    </div>
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="600">
+        <img src="outdoorvolleyball.jpg" alt="Private Beach">
+        <h2>Sand Volleyball Court</h2>
+        <p>A fun spot for guests to enjoy casual or competitive games right on the beach.</p>
+    </div>
+    <div class="grid-item" data-aos="fade-up" data-aos-delay="700">
+        <img src="playground.jpg" alt="Outdoor Dining">
+        <h2>Adventure Playground</h2>
+        <p>A fun area for kids and adults with zip lines, climbing walls, or obstacle courses.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Joseph's Resort. All Rights Reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

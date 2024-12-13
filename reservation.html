@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+    
+    .content{
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .content h1 {
+        font-family: "Montserrat";
+        font-size: 4.5rem;
+    
+    }
+    
+    .content p {
+        padding-top: 10px;
+        font-family: monospace;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.30em;
+    }
+    
+    
+    
+    
+            body {
+                margin: 0;
+                font-family: 'Rubik', sans-serif;
+                color: white;
+            }
+    
+            body {
+        margin: 0px;
+        overflow-x: hidden;
+        
+    }
+    
+    h1,h3, a, p, span {
+      font-family: "Rubik", sans-serif;
+      font-weight: 800;
+      color: white;
+      margin: 0px;
+    }
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+            background-color: #222;
+        }
+        .navbar{
+    margin-left: 5%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 52%;
+}
+
+.navbar{
+    margin-left: 5%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 52%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(reservation.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+        .banner h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .banner p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .reservation-container {
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin-top: 30px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        .reservation-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .reservation-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+        .reservation-container input, 
+        .reservation-container select, 
+        .reservation-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        .reservation-container button {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .reservation-container button:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        .content button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 100px;
+    border: 2px solid #009688;
+    transition: 1s;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+}
+button {
+    border-radius: 30px;
+}
+.content span{
+    background: #009688;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 1s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border-color: transparent;
+    transition: 0.4s;
+    color:black;
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="Logo.png" height="100px">
+            <ul>
+    <li><a href="Structural.html">Home</a></li>
+    <li><a href="amenities.html">Amenities</a></li>
+    <li><a href="roomrate.html">Room Rate</a></li>
+    <li><a href="reservation.html">Reservation</a></li>
+    <li><a href="aboutus.html">ABout us</a></li>
+            </ul>
+          </div>
+
+  
+
+      <div class="content">
+        <h1>Joseph's Resort</h1>
+        <p>Your perfect escape awaits. Discover a paradise where luxury meets nature, offering unforgettable <br>experiences, relaxation, and adventure. Let us make your stay extraordinary!
+        </p>
+
+      <div>
+        <button onclick="window.location.href='#tomybody'"><span></span>Read more</button>
+      </div>
+      </div>
+    </div>
+
+
+<div class="reservation-container" data-aos="fade-up">
+    <h2>Reservation Form</h2>
+    <form action="process_reservation.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="room">Room Type</label>
+        <select id="room" name="room" required>
+            <option value="standard">Standard Room</option>
+            <option value="deluxe">Deluxe Room</option>
+            <option value="suite">Suite</option>
+        </select>
+
+        <label for="check-in">Check-in Date</label>
+        <input type="date" id="check-in" name="check_in" required>
+
+        <label for="check-out">Check-out Date</label>
+        <input type="date" id="check-out" name="check_out" required>
+
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="payment_method" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="gpay">Google Pay</option>
+            <option value="bank-transfer">Bank Transfer</option>
+        </select>
+
+        <label for="payment-details">Payment Details</label>
+        <input type="text" id="payment-details" name="payment_details" placeholder="Enter your credit card number or PayPal ID" required>
+
+        <label for="special-requests">Special Requests</label>
+        <textarea id="special-requests" name="special_requests" rows="4" placeholder="Any special requests?"></textarea>
+
+        <button type="submit">Reserve Now</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2023 Joseph's Resort. All Rights Reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
