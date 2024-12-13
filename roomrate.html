@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Rates</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            color: white;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('roomrateswp.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            margin: 0 5%;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10%;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .content h1 {
+            font-family: "Montserrat";
+            font-size: 4.5rem;
+        }
+
+        .content p {
+            padding-top: 10px;
+            font-family: monospace;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.5rem;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .grid-item h2 {
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .grid-item .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #009688;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .grid-item .btn:hover {
+            background: #00796b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <img src="Logo.png" height="100px">
+            <ul>
+                <li><a href="Structural.html">Home</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="roomrate.html">Room Rate</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Room Rates</h1>
+            <p>Choose from a variety of luxurious rooms tailored to meet your needs and budget.</p>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="grid-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="standardroom.webp" alt="Standard Room">
+            <h2>Standard Room</h2>
+            <p>Starting at $120 per night</p>
+            <p>Perfect for solo travelers or couples looking for a cozy stay.</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+        <div class="grid-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="deluxeroom.jpg" alt="Deluxe Room">
+            <h2>Deluxe Room</h2>
+            <p>Starting at $180 per night</p>
+            <p>Enjoy additional amenities and breathtaking views from your room.</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+        <div class="grid-item" data-aos="fade-up" data-aos-delay="600">
+            <img src="suiteroom.jpg" alt="Suite">
+            <h2>Suite</h2>
+            <p>Starting at $250 per night</p>
+            <p>Experience the ultimate in luxury and comfort with our premium suites.</p>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Joseph's Resort. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
